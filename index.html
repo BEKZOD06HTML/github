@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+<body id="main-body">
+    <div id="search-box">
+        <h1 id="header-title">Github Users</h1>
+        <input type="text" id="search-input" placeholder="Enter GitHub username" onkeydown="handleKeyDown(event)">
+        <button id="search-btn" onclick="fetchUserData()">Search</button>
+        <p id="error-msg"></p>
+        <div id="loading-spinner" style="display: none;">
+            <div class="spinner"></div>
+        </div>
+        <div id="user-details" style="display: none;">
+            <img id="profile-img" alt="User Avatar">
+            <h2 id="user-fullname"></h2>
+            <p id="user-login-name"></p>
+            <p id="user-bio-info"></p>
+        
+            <div id="user-additional-info">
+                <p id="user-location"></p>
+                <p id="user-company"></p>
+                <p id="user-website"></p>
+                <p id="user-joined"></p> 
+            </div>
+        
+            <div id="user-statistics">
+                <div id="following-stat">
+                    <p id="following-count"></p>
+                    <p id="following-label">Following</p>
+                </div>
+                <div id="repo-stat">
+                    <p id="repo-count"></p>
+                    <p id="repo-label">Repos</p>
+                </div>
+                <div id="follower-stat">
+                    <p id="follower-count"></p>
+                    <p id="follower-label">Followers</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+
+</html>
